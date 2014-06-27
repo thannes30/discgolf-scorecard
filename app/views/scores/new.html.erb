@@ -1,100 +1,100 @@
 <div class="header">
   <div class="logo"><h1>Disc Golf<br>Scorecard</h1></div>
   <div class="weather">
-      <ul class="weatherlist">
-        <li>Weather: <%= @game.weather %></li>
-        <li>Temperature: <%= @game.temperature %>&deg</li>
-        <li>Wind Speed: <%= @game.wind %> mph</li>
-      </ul>
+    <ul class="weatherlist">
+      <li>Weather: <%= @game.weather %></li>
+      <li>Temperature: <%= @game.temperature %>&deg</li>
+      <li>Wind Speed: <%= @game.wind %> mph</li>
+    </ul>
     <!-- display weather here -->
   </div>
 </div>
 
 <div class="enterscores">
-<h4>Player Name:  <%= current_user.username.upcase %></h4>
-<h4>Course Name:  <%= @game.course.upcase %></h4>
+  <h4>Player Name:  <%= current_user.username.upcase %></h4>
+  <h4>Course Name:  <%= @game.course.upcase %></h4>
 
   <div class="enterscores_left">
-      <%= form_for :score, url: game_scores_path(@game) do |f| %>
-        <div class="smallforms">
-          <%= f.label :hole_1 %>:
-          <%= f.text_field :hole_1, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_2 %>:
-          <%= f.text_field :hole_2, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_3 %>:
-          <%= f.text_field :hole_3, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_4 %>:
-          <%= f.text_field :hole_4, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_5 %>:
-          <%= f.text_field :hole_5, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_6 %>:
-          <%= f.text_field :hole_6, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_7 %>:
-          <%= f.text_field :hole_7, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_8 %>:
-          <%= f.text_field :hole_8, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_9 %>:
-          <%= f.text_field :hole_9, :size => 5 %><br>
-        </div>
-   </div>
-   <div class="enterscores_right">
-        <div class="smallforms">
-          <%= f.label :hole_10 %>:
-          <%= f.text_field :hole_10, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_11 %>:
-          <%= f.text_field :hole_11, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_12 %>:
-          <%= f.text_field :hole_12, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_13 %>:
-          <%= f.text_field :hole_13, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_14 %>:
-          <%= f.text_field :hole_14, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_15 %>:
-          <%= f.text_field :hole_15, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_16 %>:
-          <%= f.text_field :hole_16, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_17 %>:
-          <%= f.text_field :hole_17, :size => 5 %><br>
-        </div>
-        <div class="smallforms">
-          <%= f.label :hole_18 %>:
-            <%= f.text_field :hole_18, :size => 5 %><br>
-        </div>
-        <div class="saveround">
-          <%= f.submit("Save Round") %>
-        </div>
+    <%= form_for :score, url: game_scores_path(@game) do |f| %>
+      <div class="smallforms">
+        <%= f.label :hole_1 %>:
+        <%= f.text_field :hole_1, :size => 5 %><br>
+      </div>
+      <div class="smallforms">
+        <%= f.label :hole_2 %>:
+        <%= f.text_field :hole_2, :size => 5 %><br>
+      </div>
+      <div class="smallforms">
+        <%= f.label :hole_3 %>:
+        <%= f.text_field :hole_3, :size => 5 %><br>
+      </div>
+      <div class="smallforms">
+        <%= f.label :hole_4 %>:
+        <%= f.text_field :hole_4, :size => 5 %><br>
+      </div>
+      <div class="smallforms">
+        <%= f.label :hole_5 %>:
+        <%= f.text_field :hole_5, :size => 5 %><br>
+      </div>
+      <div class="smallforms">
+        <%= f.label :hole_6 %>:
+        <%= f.text_field :hole_6, :size => 5 %><br>
+      </div>
+      <div class="smallforms">
+        <%= f.label :hole_7 %>:
+        <%= f.text_field :hole_7, :size => 5 %><br>
+      </div>
+      <div class="smallforms">
+        <%= f.label :hole_8 %>:
+        <%= f.text_field :hole_8, :size => 5 %><br>
+      </div>
+      <div class="smallforms">
+        <%= f.label :hole_9 %>:
+        <%= f.text_field :hole_9, :size => 5 %><br>
+      </div>
+  </div>
+  <div class="enterscores_right">
+    <div class="smallforms">
+      <%= f.label :hole_10 %>:
+      <%= f.text_field :hole_10, :size => 5 %><br>
+    </div>
+    <div class="smallforms">
+      <%= f.label :hole_11 %>:
+      <%= f.text_field :hole_11, :size => 5 %><br>
+    </div>
+    <div class="smallforms">
+      <%= f.label :hole_12 %>:
+      <%= f.text_field :hole_12, :size => 5 %><br>
+    </div>
+    <div class="smallforms">
+      <%= f.label :hole_13 %>:
+      <%= f.text_field :hole_13, :size => 5 %><br>
+    </div>
+    <div class="smallforms">
+      <%= f.label :hole_14 %>:
+      <%= f.text_field :hole_14, :size => 5 %><br>
+    </div>
+    <div class="smallforms">
+      <%= f.label :hole_15 %>:
+      <%= f.text_field :hole_15, :size => 5 %><br>
+    </div>
+    <div class="smallforms">
+      <%= f.label :hole_16 %>:
+      <%= f.text_field :hole_16, :size => 5 %><br>
+    </div>
+    <div class="smallforms">
+      <%= f.label :hole_17 %>:
+      <%= f.text_field :hole_17, :size => 5 %><br>
+    </div>
+    <div class="smallforms">
+      <%= f.label :hole_18 %>:
+      <%= f.text_field :hole_18, :size => 5 %><br>
+    </div>
+    <div class="saveround">
+      <%= f.submit("Save Round") %>
+    </div>
       </form>
   </div>
-<% end %>
+    <% end %>
 </div>
 <div class="footer"></div>

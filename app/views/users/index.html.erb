@@ -5,20 +5,20 @@
 
 <div class="creategame">
   <div class="loginsignup">
-  <% if current_user %>
-    <p class="signedin">
-      You are signed in as <%= current_user.username %>.
-    </p>
-    <%= link_to "Create New Game", games_path %><br><br>
-    <%= link_to "Log Out", log_out_path, method: :delete %>
-  <% else %>
-    <br><h4>Welcome to <br>Disc Golf Scorecard!</h4><p>To keep score of your <br>game, please
-    <%= link_to "Log In", log_in_path %>.<br><br>
-    To create an account,<br> please
-    <%= link_to "Sign Up", users_new_path %>.
-    </p>
+    <% if current_user %>
+      <p class="signedin">
+        You are signed in as <%= current_user.username %>.
+      </p>
+      <%= link_to "Create New Game", games_path %><br><br>
+      <%= link_to "Log Out", log_out_path, method: :delete %>
+    <% else %>
+      <br><h4>Welcome to <br>Disc Golf Scorecard!</h4><p>To keep score of your <br>game, please
+        <%= link_to "Log In", log_in_path %>.<br><br>
+        To create an account,<br> please
+        <%= link_to "Sign Up", users_new_path %>.
+      </p>
   </div>
-  <% end %>
-  </div>
+    <% end %>
+</div>
 </div>
 <div class="footer"></div>

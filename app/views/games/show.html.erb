@@ -7,49 +7,47 @@
   <%= current_user.username %>
 </div>
 <div class="showscores">
-    <div class="displayname">
-      <h4><%= current_user.username.upcase %> Scores</h4>
-    </div>
+  <div class="displayname">
+    <h4><%= current_user.username.upcase %> Scores</h4>
+  </div>
 
   <div class="table">
-  <table>
-    <div class="headers">
-    <tr>
-      <th>Date</th>
-      <th>Course</th>
-      <th>Score</th>
-      <th>Weather</th>
-    </tr>
-  </div>
+    <table>
+      <div class="headers">
+        <tr>
+          <th>Date</th>
+          <th>Course</th>
+          <th>Score</th>
+          <th>Weather</th>
+        </tr>
+      </div>
       <% @scores.each do |score| %>
-    <tr>
-      <div class="column">
-        <td>
-          <%= game.created_at.strftime("%b %d 20%y") %>
-        </td>
-      </div>
-      <div class="column">
-        <td>
-          <%= game.course %>
-        </td>
-      </div>
-      <div class="column">
-        <td>
-          <%= game.total_score %>
-        </td>
-      </div>
-      <div class="column">
-      <td>
-         <!-- game.weather img
-         game.temperature
-         game.wind -->
-      </td>
-    </div>
-     </tr>
-    <% end %>
-  </table>
+        <tr>
+          <div class="column">
+            <td>
+              <%= game.created_at.strftime("%b %d 20%y") %>
+            </td>
+          </div>
+          <div class="column">
+            <td>
+              <%= game.course %>
+            </td>
+          </div>
+          <div class="column">
+            <td>
+              <%= game.total_score %>
+            </td>
+          </div>
+          <div class="column">
+            <td>
+              <!-- game.weather img
+              game.temperature
+              game.wind -->
+            </td>
+          </div>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>
 <div class="footer"></div>
-
-
