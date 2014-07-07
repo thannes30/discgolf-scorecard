@@ -1,7 +1,7 @@
 <div class="header">
   <div class="logo"><h1>Disc Golf<br>Scorecard</h1></div>
   <div class="newgame">
-      <%= link_to "New Game", games_path %>
+    <%= link_to "New Game", games_path %>
   </div>
   <div class="signoff">
     <%= link_to "Log Out", log_out_path, method: :delete %>
@@ -9,56 +9,56 @@
 </div>
 
 <div class="showscores">
-    <div class="displayname">
-      <h4><%= current_user.username.upcase %> Scores</h4>
-    </div>
+  <div class="displayname">
+    <h4><%= current_user.username.upcase %> Scores</h4>
+  </div>
 
   <div class="table">
-  <table>
-    <div class="headers">
-    <tr>
-      <th>Date</th>
-      <th>Course</th>
-      <th>Score</th>
-      <th>Weather</th>
-      <th> </th>
-    </tr>
-  </div>
+    <table>
+      <div class="headers">
+        <tr>
+          <th>Date</th>
+          <th>Course</th>
+          <th>Score</th>
+          <th>Weather</th>
+          <th> </th>
+        </tr>
+      </div>
       <% unless @scores.nil? %>
-      <% @scores.each do |score| %>
-    <tr>
-      <div class="column">
-        <td class="tablecolumn">
-          <%= score.created_at.strftime("%b %d, 20%y") %>
-        </td>
-      </div>
-      <div class="column">
-        <td class="tablecolumn">
-          <% if score.game %>
-            <%= score.game.course %>
-          <% end %>
-        </td>
-      </div>
-      <div class="column">
-        <td class="tablecolumn">
-          <%= score.hole_1 + score.hole_2 + score.hole_3 + score.hole_4 + score.hole_5 + score.hole_6 + score.hole_7 + score.hole_8 + score.hole_9 + score.hole_10 + score.hole_11 + score.hole_12 + score.hole_13 + score.hole_14 + score.hole_15 + score.hole_16 + score.hole_17  %>
-        </td>
-      </div>
-      <div class="column">
-      <td class="tablecolumn">
-        <p><%= @game.weather %><br>
-        <%= @game.temperature %>&deg<br>
-        <%= @game.wind %> mph</p>
-      </td>
-      <td class="tablecolumn">
-          <%= form_for(@game, :html => { :method => :delete }) do |f| %>
-          <%= f.submit "Delete" %>
-          <% end %>
-       </td>
-    </div>
-     </tr>
-     <% end %>
-    <% end %>
-  </table>
+        <% @scores.each do |score| %>
+          <tr>
+            <div class="column">
+              <td class="tablecolumn">
+                <%= score.created_at.strftime("%b %d, 20%y") %>
+              </td>
+            </div>
+            <div class="column">
+              <td class="tablecolumn">
+                <% if score.game %>
+                  <%= score.game.course %>
+                <% end %>
+              </td>
+            </div>
+            <div class="column">
+              <td class="tablecolumn">
+                <%= score.hole_1 + score.hole_2 + score.hole_3 + score.hole_4 + score.hole_5 + score.hole_6 + score.hole_7 + score.hole_8 + score.hole_9 + score.hole_10 + score.hole_11 + score.hole_12 + score.hole_13 + score.hole_14 + score.hole_15 + score.hole_16 + score.hole_17  %>
+              </td>
+            </div>
+            <div class="column">
+              <td class="tablecolumn">
+                <p><%= @game.weather %><br>
+                  <%= @game.temperature %>&deg<br>
+                  <%= @game.wind %> mph</p>
+              </td>
+              <td class="tablecolumn">
+                <%= form_for(@game, :html => { :method => :delete }) do |f| %>
+                  <%= f.submit "Delete" %>
+                <% end %>
+              </td>
+            </div>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
   </div>
 </div>

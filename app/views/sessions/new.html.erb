@@ -4,15 +4,15 @@
 </div>
 
 <div class="login">
-<h4>Log In</h4>
-<%= form_tag sessions_path do %>
-  <%= label_tag :username %><br>
-  <%= text_field_tag :username %><br>
-  <%= label_tag :password %><br>
-  <%= password_field_tag :password %><br>
-  <%= submit_tag "Log In" %>
-<% end %>
-<p>Not a member? <%= link_to "Sign Up", users_new_path %></p>
+  <h4>Log In</h4>
+  <%= form_tag sessions_path do %>
+    <%= label_tag :username %><br>
+    <%= text_field_tag :username %><br>
+    <%= label_tag :password %><br>
+    <%= password_field_tag :password %><br>
+    <%= submit_tag "Log In" %>
+  <% end %>
+  <p>Not a member? <%= link_to "Sign Up", users_new_path %></p>
 </div>
 
 <div class="footer"></div>
